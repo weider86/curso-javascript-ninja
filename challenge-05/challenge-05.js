@@ -57,53 +57,61 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-function book(bookName){
+function book( bookName ){
   
-  var books = {
+  var allBooks = {
     
-    HarryPotter: { 
-      qtdPaginas: 101, autor: 'John Potter', editora: 'Books de Howgards' 
-    },
-    SenhorDosAneis: { 
-      qtdPaginas: 102, autor: 'John Froldo', editora: 'Books dos Anéis'
-    },
-    GameOfThrones: { 
-      qtdPaginas: 103, autor: 'John Snow', editora: 'Books do Norte' 
-    }
+      'Segredos do Ninja Javascript': { 
+          qtdPaginas: 488, 
+          autor: 'John Potter', 
+          editora: 'Books de Howgards' 
+      },
+      'Introdução ao HTML5': { 
+          qtdPaginas: 220, 
+          autor: 'John Froldo', 
+          editora: 'Books dos Anéis'
+      },
+      'Smashing CSS': { 
+          qtdPaginas: 283, 
+          autor: 'John Snow', 
+          editora: 'Books do Norte' 
+      }
     
   };
   
-  //var booksObjectName = Object.getOwnPropertyNames(books)
-  if(bookName = books.bookName){
-    return books;
+
+  if( !bookName ){
+    return allBooks;
   }
   
-  
+  return allBooks[ bookName ];
   
 };
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-// ?
+book();
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
 "O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
+console.log("O livro Segredos do Ninja Javascript tem " + book('Segredos do Ninja Javascript').qtdPaginas + " páginas!");
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-// ?
+console.log("O autor do livro Segredos do Ninja Javascript é " + book('Segredos do Ninja Javascript').autor);
+
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-// ?
+console.log("O livro Segredos do Ninja Javascript foi publicado pela editora " + book('Segredos do Ninja Javascript').editora);
+
