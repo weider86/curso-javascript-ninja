@@ -93,10 +93,10 @@ function convertToHex(cor){
     case 'white': 
       hexa = "#ffffff";
       break;
-    default: console.log("Não temos o equivalente hexadecimal para " + cor + " .");
+    default: return "Não temos o equivalente hexadecimal para " + cor + " .";
   }
   
-  console.log("O hexadecimal para a cor " + cor + " é " + hexa);
+  return "O hexadecimal para a cor " + cor + " é " + hexa;
 }
 
 
@@ -108,6 +108,6 @@ convertToHex('blue'); // O hexadecimal para a cor blue é #0000ff
 convertToHex('green'); // O hexadecimal para a green red é #00ff00
 convertToHex('black'); // O hexadecimal para a cor black é #000000
 convertToHex('white'); // O hexadecimal para a cor white é #ffffff
-
-convertToHex('white'); // O hexadecimal para a cor white é #ffffff
-convertToHex('white'); // O hexadecimal para a cor white é #ffffff
+convertToHex('orange'); // "Não temos o equivalente hexadecimal para orange."
+convertToHex('pink'); // "Não temos o equivalente hexadecimal para pink."
+convertToHex('yellow'); // "Não temos o equivalente hexadecimal para yellow."
